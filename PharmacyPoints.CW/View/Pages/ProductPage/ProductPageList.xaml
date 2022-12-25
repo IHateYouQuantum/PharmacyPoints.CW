@@ -1,0 +1,50 @@
+﻿<Page x:Class="PharmacyPoints.CW.View.Pages.ProductPage.ProductPageList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PharmacyPoints.CW.View.Pages.ProductPage"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+       FontFamily="Comic Sans MS"
+      MouseLeftButtonDown="Page_MouseLeftButtonDown">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Margin="5">
+            <DataGrid x:Name="DataEmploerInfo"
+                              FontSize="15"
+                              Height="400"
+                              Width="700"
+                              Foreground="White"
+                              AutoGenerateColumns="False"
+                              IsReadOnly="True"
+                              CanUserSortColumns="False"
+                              Background="#4682B4"
+                              GridLinesVisibility="Horizontal"
+                              ColumnHeaderHeight="50"
+                              CanUserAddRows="False"
+                              CanUserDeleteRows="False"
+                              CanUserResizeRows="False"
+                              Effect="{StaticResource MaterialDesignElevationShadow16}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="Auto"
+                                                Header="НАЗВАНИЕ ЛЕКАРСТВА"
+                                                Binding="{Binding NameProduct}"
+                                                FontFamily="15"
+                                                Foreground="White"/>
+                    <DataGridTextColumn Width="Auto"
+                                                Header="КОЛ-ВО"
+                                                Binding="{Binding AmountProduct}"
+                                                FontFamily="15"/>
+                    <DataGridTextColumn Width="Auto"
+                                                Header="ЦЕНА"
+                                                Binding="{Binding ProceRub}"
+                                                FontFamily="15"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Page>
